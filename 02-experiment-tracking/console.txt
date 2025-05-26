@@ -1,0 +1,4 @@
+Question : 1 
+@skayikci ➜ /workspaces/mlops-zoomcamp-course (main) $ mlflow --version
+mlflow, version 2.22.0
+
