@@ -23,14 +23,18 @@ def run_train(data_path: str):
 
     X_train, y_train = load_pickle(os.path.join(data_path, "train.pkl"))
     X_val, y_val = load_pickle(os.path.join(data_path, "val.pkl"))
+    mlflow.set_tracking_uri("http://localhost:5003")
 
+    mlflow.set_experiment("random-forest-baseline")
     mlflow.sklearn.autolog()
+
     with mlflow.start_run():
         rf = RandomForestRegressor(max_depth=10, random_state=0)
         rf.fit(X_train, y_train)
         y_pred = rf.predict(X_val)
 
         rmse = root_mean_squared_error(y_val, y_pred)
+        mlflow.log_metric("val_rmse", rmse)
 
 
 if __name__ == '__main__':
