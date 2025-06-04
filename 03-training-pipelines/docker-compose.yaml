@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  mlflow:
+    build:
+      context: .
+      dockerfile: mlflow.dockerfile
+    ports:
+      - "5054:5000"
+    volumes:
+      - "./mlflow_data:/home/mlflow_data"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

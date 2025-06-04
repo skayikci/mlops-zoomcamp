@@ -115,3 +115,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Local folders for mage
+training-*/
+.file_versions/
+.ssh_tunnel/
+*.bin
