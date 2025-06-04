@@ -11,4 +11,7 @@ Screenshot of the mage UI:
 mage init training-pipelines-hw3
 
 ## Step 4 : Create blocks in the Mage UI
-[Blocks pdf](mage-blocks.pdf)
+[Blocks pdf](mage-blocks-output.pdf)
+
+## Step 5 : Model Size
+[Model size pdf](model-size.pdf)

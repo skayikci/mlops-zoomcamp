@@ -1,0 +1,9 @@
+block_type: data_loader
+color: null
+configuration: null
+description: Should get parameters such as year in 4 digits and month in 2 digits
+language: python
+name: null
+pipeline: {}
+tags: []
+user: {}
